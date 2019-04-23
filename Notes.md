@@ -14,4 +14,8 @@
 - **@NgModule.imports** metadata's imports array -> contains a list of external modules that the app needs.
 Every component must be declared in exactly one NgModule
 - **@NgModule.declarations**
+- ***ngFor**
+- **event binding**
+- ***ngIf**
+- **class binding**: makes it easy to add and remove a CSS class conditionally.
 
