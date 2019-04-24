@@ -1,6 +1,6 @@
 import { Hero } from './hero';
 
-export const HEROES = new Array(
+export const HEROES = [
   new Hero(1, 'Windstorm'),
   new Hero(2, 'Mr. Nice'),
   new Hero(3, 'Narco'),
@@ -12,4 +12,4 @@ export const HEROES = new Array(
   new Hero(9, 'Dr IQ'),
   new Hero(10, 'Magma'),
   new Hero(11, 'Tornado')
-);
+];

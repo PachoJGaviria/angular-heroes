@@ -1,20 +1,9 @@
-<div class="flex-container">
-  <div class="heroes">
-    <h2>Heroes</h2>
-    <ul>
-      <li *ngFor="let hero of heroes" (click)="onSelect(hero)" [class.selected]="hero === selectedHero">
-        <span class="badge">{{hero.id}}</span> {{' - ' + hero.name}}
-      </li>
-    </ul>
-  </div>
-
-  <div *ngIf="selectedHero" class="hero-details">
-    <h2>{{selectedHero.name | uppercase}} Details</h2>
-    <div><span>id: </span>{{selectedHero.id}}</div>
-    <div>
-      <label>name:
-        <input [(ngModel)]="selectedHero.name" placeholder="hero`s name" type="text" />
-      </label>
-    </div>
-  </div>
+<div class="heroes">
+  <h2>Heroes</h2>
+  <ul>
+    <li *ngFor="let hero of heroes" (click)="onSelect(hero)" [class.selected]="hero === selectedHero">
+      <span class="badge">{{hero.id}}</span> {{' - ' + hero.name}}
+    </li>
+  </ul>
 </div>
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>

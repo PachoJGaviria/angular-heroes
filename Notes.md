@@ -1,4 +1,7 @@
 # Concepts
+- **Component**
+  - Components shouldn't fetch or save data directly and they certainly shouldn't knowingly present fake data. They should focus on presenting data and delegate data access to a service.
+- **Directive**
 - **interpolation binding syntax**: `<h1>{{title}}</h1>`
 - **Component basic structure**
   - selector — the component's CSS element selector
@@ -18,4 +21,18 @@ Every component must be declared in exactly one NgModule
 - **event binding**
 - ***ngIf**
 - **class binding**: makes it easy to add and remove a CSS class conditionally.
+- **Input property**: (@Input() decorator)
 
+  property binding: `<app-component [property]="value"></app-component>`
+  
+  `@Input() property: string;`
+- **selector**
+- **one way data binding**
+- **Services**: 
+  - Services are a great way to share information among classes that don't know each other.
+  - change your mind about the implementation anytime, without touching any components
+- **dependency injection**
+- **dependency injection system**
+- **root injector**: When you provide the service at the root level, Angular creates a single, shared instance of SERVICE and injects into any class that asks for it. 
+- **Constructor**: Reserve the constructor for simple initialization such as wiring constructor parameters to properties.
+- **Observable** is one of the key classes in the RxJS library.
