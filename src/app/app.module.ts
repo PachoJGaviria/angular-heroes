@@ -3,16 +3,18 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
-import { MaterialModule } from './ui-component/material.module';
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import { MessagesComponent } from './messages/messages.component';
+import { MaterialModule } from './cross-component/material.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeroesComponent,
-    HeroDetailComponent
+    HeroDetailComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +23,9 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
     FormsModule,
     MaterialModule
   ],
-  providers: [],
+  providers: [
+        // no need to place any providers due to the `providedIn` flag...
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

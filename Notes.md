@@ -36,3 +36,5 @@ Every component must be declared in exactly one NgModule
 - **root injector**: When you provide the service at the root level, Angular creates a single, shared instance of SERVICE and injects into any class that asks for it. 
 - **Constructor**: Reserve the constructor for simple initialization such as wiring constructor parameters to properties.
 - **Observable** is one of the key classes in the RxJS library.
+- **service-in-service**
+- A property must be **public** because you're about to bind to it in the **template**. Angular only binds to public component properties.
