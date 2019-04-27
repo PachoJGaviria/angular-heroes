@@ -38,3 +38,18 @@ Every component must be declared in exactly one NgModule
 - **Observable** is one of the key classes in the RxJS library.
 - **service-in-service**
 - A property must be **public** because you're about to bind to it in the **template**. Angular only binds to public component properties.
+- **AppRoutingModule**: In Angular, the best practice is to load and configure the router in a separate, top-level module that is dedicated to routing and imported by the root AppModule.
+```ng generate module app-routing --flat --module=app```
+Routes tell the router which view to display when a user clicks a link or pastes a URL into the browser address bar.
+A typical Angular Route has two properties:
+  - path: a string that matches the URL in the browser address bar.
+  - component: the component that the router should create when navigating to this route.
+  - RouterModule.forRoot: you configure the router at the application's root level.
+- **RouterOutlet**:tells the router where to display routed views. It is one of the router directives that became available to the AppComponent because AppModule imports AppRoutingModule which exported RouterModule.
+- **RouterLink directive**
+- **navigation link (routerLink)**
+- **placeholder**
+- **Angular interpolation binding**
+
+
+

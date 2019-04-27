@@ -1,29 +1,22 @@
 import { Hero } from './../model/hero';
 import { Component, OnInit } from '@angular/core';
 import { HeroService } from '../service/hero.service';
+import { BaseHeroesComponent } from '../cross-component/base.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
   styleUrls: ['./heroes.component.scss']
 })
-export class HeroesComponent implements OnInit {
+export class HeroesComponent extends BaseHeroesComponent implements OnInit {
 
-  heroes: Array<Hero>;
-
-  selectedHero: Hero;
-
-  constructor(private heroService: HeroService) { }
+  constructor(protected heroService: HeroService, private router: Router) {
+    super(heroService);
+  }
 
   ngOnInit() {
     this.getHeroes();
-  }
-
-  /**
-   * Get the heroes
-   */
-  getHeroes(): void {
-    this.heroService.getHeroes().subscribe(heroes => this.heroes = heroes);
   }
 
   /**
@@ -31,7 +24,7 @@ export class HeroesComponent implements OnInit {
    * @param hero the selected hero
    */
   onSelect(hero: Hero): void {
-    this.selectedHero = hero;
+    this.router.navigate([`detail/${hero.id}`], {});
   }
 
 }

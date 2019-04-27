@@ -11,7 +11,6 @@ import { MessagesService } from './messages.service';
   providedIn: 'root'
 })
 export class HeroService {
-
   /**
    * Constructor
    * @param messagesService Messages service
@@ -25,5 +24,15 @@ export class HeroService {
     // TODO: send the message _after_ fetching the heroes
     this.messagesService.add('Hero service: fetched heroes');
     return of(HEROES);
+  }
+
+  /**
+   * Get an observable of a hero.
+   * @param heroId hero`s id
+   */
+  getHero(heroId: number): Observable<Hero> {
+    // TODO: send the message _after_ fetching the hero
+    this.messagesService.add(`Hero service: fetched the hero with id: ${heroId}`);
+    return of(HEROES.find(hero => hero.id === heroId));
   }
 }
