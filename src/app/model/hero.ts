@@ -1,8 +1,23 @@
 export class Hero {
-  constructor(id: number, name: string) {
-    this.id = id;
-    this.name = name;
-  }
+
   id: number;
+
   name: string;
+
+  /**
+   * Constructor
+   * @param name hero`s name
+   * @param id optional number id (for new instance is not require)
+   */
+  private constructor(name: string, id?: number) {
+    this.name = name;
+    this.id = id;
+  }
+
+  /**
+   * Create a new hero
+   */
+  static createNewHero(name: string, id?: number): Hero {
+    return { name, id } as Hero;
+  }
 }

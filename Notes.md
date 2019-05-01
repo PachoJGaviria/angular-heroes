@@ -50,6 +50,26 @@ A typical Angular Route has two properties:
 - **navigation link (routerLink)**
 - **placeholder**
 - **Angular interpolation binding**
+- **HttpClient**: 
+All HttpClient methods return an RxJS Observable of something.
+HTTP is a request/response protocol. You make a request, it returns a single response.
+An observable from HttpClient always emits a single value and then completes, never to emit again.
+The body of the response as an untyped JSON object by default. Applying the optional type specifier, `<expect-type>` , gives you a typed result object.
+
+  - pipe
+  - map
+  - tap
+  - catchError
+- **Http Error handling**
+  - handleError
+- **observable**
+  - If you neglect to subscribe(), the service will not send the delete request to the server! As a rule, an Observable does nothing until something subscribes!
+  you can chain Observable operators together so you can minimize the number of similar HTTP requests and consume network bandwidth economically.
+- **RxJS**: RxJS tap operator, which looks at the observable values, does something with those values, and passes them along. The tap call back doesn't touch the values themselves.
+
+A Subject is both a source of observable values and an Observable itself. You can subscribe to a Subject as you would any Observable.
+
+- **Chaining RxJS operators**:
 
 
 

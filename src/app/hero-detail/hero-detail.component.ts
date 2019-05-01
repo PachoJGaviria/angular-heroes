@@ -31,11 +31,18 @@ export class HeroDetailComponent implements OnInit {
       .subscribe(hero => this.hero = hero);
   }
 
-
   /**
    * Go back in the platform's history.
    */
   goBack(): void {
     this.location.back();
+  }
+
+  save(): void {
+    this.heroService.updateHero(this.hero)
+      .subscribe((newHero) => {
+        this.hero = newHero;
+        this.goBack();
+      });
   }
 }
