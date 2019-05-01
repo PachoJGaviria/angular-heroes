@@ -1,5 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { FormsModule } from '@angular/forms';
+import { RouterTestingModule } from '@angular/router/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { HeroSearchComponent } from './hero-search.component';
 
 describe('HeroSearchComponent', () => {
@@ -8,9 +10,11 @@ describe('HeroSearchComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HeroSearchComponent ]
+      declarations: [HeroSearchComponent],
+      imports: [FormsModule, RouterTestingModule, HttpClientTestingModule]
+
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
