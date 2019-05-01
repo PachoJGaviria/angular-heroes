@@ -1,0 +1,32 @@
+<div class="heroes">
+    <h2>Heroes</h2>
+    <div class="newHero">
+        <label>
+            Hero name:
+            <input #heroName>
+            <!-- (click) passes input value to add() and then clears the input -->
+            <button
+                class="add"
+                (click)="add(heroName.value); heroName.value=''"
+            >
+                add
+            </button>
+        </label>
+
+    </div>
+    <ul>
+        <div *ngFor="let hero of heroes">
+            <li (click)="onSelect(hero)">
+                <span class="badge">{{hero.id}}</span>
+                {{' - ' + hero.name}}
+            </li>
+            <button
+                class="delete"
+                title="delete hero"
+                (click)="delete(hero)"
+            >
+                X
+            </button>
+        </div>
+    </ul>
+</div>

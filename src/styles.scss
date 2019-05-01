@@ -1,0 +1,43 @@
+/* Imports */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+/* Application-wide Styles */
+h1 {
+    color: #369;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 250%;
+}
+
+h2,
+h3 {
+    color: #444;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+}
+
+body {
+    margin: 2em;
+}
+
+body,
+input[type="text"],
+button {
+    color: #888;
+    font-family: Cambria, Georgia;
+}
+
+/* everywhere else */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+button {
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    cursor: hand;
+    font-family: Arial;
+    background-color: gray !important;
+    color: white !important;
+}
